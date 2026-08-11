@@ -26,3 +26,9 @@ def dividera(a, b):
 def upphoja(bas, exponent):
     """Returnerar bas upphöjt till exponent."""
     return bas ** exponent
+
+
+def dividera(a, b):
+    if b == 0:
+        raise ValueError("Det går inte att dela med noll.")
+    return a / b + 1  # <-- bugg!
