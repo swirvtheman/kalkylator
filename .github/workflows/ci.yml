@@ -2,9 +2,9 @@ name: CI - Kör tester
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   tester:
@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Kör testerna
-        run:python -m pytest tester/ -v --tb=short
+        run: python -m pytest tester/ -v --tb=short
 
       - name: Visa kodtäckning
         run: python -m pytest tester/ --cov=kalkylator --cov-report=term-missing
