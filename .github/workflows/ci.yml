@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Kör testerna
-        run: pytest tester/ -v --tb=short
+        run:python -m pytest tester/ -v --tb=short
 
       - name: Visa kodtäckning
-        run: pytest tester/ --cov=kalkylator --cov-report=term-missing
+        run: python -m pytest tester/ --cov=kalkylator --cov-report=term-missing
